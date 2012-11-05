@@ -65,7 +65,7 @@ public final class VectorHelper {
   public static String buildJson(Iterable<Pair<String,Double>> iterable, StringBuilder bldr) {
     bldr.append('{');
     for (Pair<String,Double> p : iterable) {
-      bldr.append(p.getFirst());
+      bldr.append( '"' + p.getFirst() + '"');
       bldr.append(':');
       bldr.append(p.getSecond());
       bldr.append(',');
