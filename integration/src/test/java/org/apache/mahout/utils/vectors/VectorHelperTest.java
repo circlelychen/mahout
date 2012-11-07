@@ -37,9 +37,9 @@ public final class VectorHelperTest extends MahoutTestCase {
         UNUSED, UNUSED, "two", UNUSED, "four", UNUSED, "six", "seven", UNUSED, "nine"
     };
 
-    assertEquals("sorted json form incorrect: ", "{nine:12.2,six:8.1,two:3.1}",
+    assertEquals("sorted json form incorrect: ", "{\"nine\":12.2,\"six\":8.1,\"two\":3.1}",
         VectorHelper.vectorToJson(v, dictionary, 3, true));
-    assertEquals("unsorted form incorrect: ", "{two:3.1,four:1.0}",
+    assertEquals("unsorted form incorrect: ", "{\"two\":3.1,\"four\":1.0}",
         VectorHelper.vectorToJson(v, dictionary, 2, false));
   }
 
